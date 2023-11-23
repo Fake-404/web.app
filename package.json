@@ -1,0 +1,24 @@
+{
+  "name": "myapi.web",
+  "version": "1.0.0",
+  "description": "Under testing...",
+  "main": "JS/api.js",
+  "scripts": {
+    "build": "cp -R . dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@queenanya/ytdlcore": "^npm:@queenanya/ytdlcore",
+    "@queenanya/ytsearch": "^npm:@queenanya/ytsearch",
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.12",
+    "ffmpeg": "^0.0.4",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.3.0",
+    "sharp": "^0.32.6",
+    "wa-sticker-formatter": "^4.4.4"
+  }
+}
