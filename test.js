@@ -1,1 +1,1 @@
- /* for testing only */
+/* Only for testing */
