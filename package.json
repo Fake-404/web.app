@@ -19,6 +19,7 @@
     "fs": "^0.0.1-security",
     "mongodb": "^6.3.0",
     "sharp": "^0.32.6",
+    "tesseract.js": "^5.0.3",
     "wa-sticker-formatter": "^4.4.4"
   }
 }
