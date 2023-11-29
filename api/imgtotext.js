@@ -11,7 +11,7 @@ export default async (req, res) => {
       throw new Error('Invalid key or missing media');
     }
 
-    const textResult = await totext.imgToText(Buffer.from(media, 'base64'), 'eng');
+    const textResult = await totext.imgToText(media, 'eng');
     code._200(res, { text: textResult });
   } catch (error) {
     console.error(error);
