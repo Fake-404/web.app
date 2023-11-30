@@ -20,7 +20,6 @@
     "mongodb": "^6.3.0",
     "sharp": "^0.32.6",
     "tesseract.js": "^5.0.3",
-    "tesseract.js-core": "^5.0.0",
     "wa-sticker-formatter": "^4.4.4"
   }
 }
