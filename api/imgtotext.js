@@ -4,7 +4,8 @@ const code = require('../func/codes.js');
 
 export default async (req, res) => {
   const key = req.query.key || false;
-  const media = req.body.data.media || false;
+  console.log(req.body)
+  const media = req.body.media || false;
 
   if (!isKey(key, res)) return;
 
