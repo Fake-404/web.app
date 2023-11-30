@@ -6,6 +6,7 @@ export default async (req, res) => {
   const key = req.query.key || false;
   const packname = req.query.packname || false;
   const author = req.query.author || false;
+  console.log(req.body)
   const media = req.body.media || false;
 
   if (!isKey(key, res)) return;
