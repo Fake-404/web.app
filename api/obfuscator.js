@@ -1,21 +1,22 @@
 const js = require('../lib/scraper');
 const { isKey } = require('../func/checkkey.js');
-const code = require('../func/codes.js');
+const codeHelper = require('../func/codes.js');
 
 export default async (req, res) => {
   const key = req.query.key || false;
-  const code = req.body.code || false;
+  const codeText = req.body.code || false;
 
   if (!isKey(key, res)) return;
-  if (!code) {
-    code._404(res, "Enter a javascript");
+  if (!codeText) {
+    codeHelper._404(res, "Enter JavaScript code.");
     return;
   }
   
-  js.obfuscateJs(code)
-    .then((result) => code._200(res, result))
-    .catch((error) => {
-      console.error(error);
-      code._403(res);
-    });
+  try {
+    const obfuscatedCode = await js.obfuscateJs(codeText);
+    codeHelper._200(res, obfuscatedCode);
+  } catch (error) {
+    console.error(error);
+    codeHelper._403(res, "An internal server error occurred.");
+  }
 };
